@@ -55,3 +55,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #パスワードの暗号化
 gem 'bcrypt'
+
+group :production do
+  gem 'pg'
+end
