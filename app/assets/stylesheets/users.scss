@@ -1,0 +1,45 @@
+  // user
+  .user {
+    display: flex;
+    justify-content: center;
+    &__btns {
+      padding-top: 30px;
+    }
+    &__btn a {
+      color: #555 !important;
+    }
+    &__btn {
+      background-color: #fff;
+      width: 500px;
+      padding: 20px;
+      border-radius: 15px;
+      color: #555 !important;
+      margin-top: 20px;
+    }
+    &__item {
+      padding: 20px 60px;
+    }
+    &__img {
+      margin-top: 5px;
+      border-radius: 50%;
+      height: 130px;
+    }
+  }
+
+  .user-tabs {
+    padding-top: 50px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .user {
+      &__img {
+        margin-top: 5px;
+        border-radius: 50%;
+        width: 30vw;
+        height: 30vw;
+      }
+      &__item {
+        font-size: 3vw;
+      }
+    }
+  }

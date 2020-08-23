@@ -1,0 +1,184 @@
+.container, .login {
+    width: 60vw;
+    margin: 16px auto;
+    font-size: 16px;
+  }
+  
+  .login-header, .login p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .login p {
+    padding: 12px;
+  }
+  
+  .container input, .login input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    border-width: 1px;
+    border-style: solid;
+    padding: 16px;
+    outline: 0;
+    font-family: inherit;
+    font-size: 0.95em;
+  }
+  
+  .container input[type="file"], .container input[type="email"], .container input[type="password"], .container input[type="name"], .login input[type="email"], .login input[type="password"], .login input[type="name"] {
+    background: #fff;
+    border-color: #bbb;
+    color: #555;
+  }
+  
+  
+  /* Text fields' focus effect */
+  
+  .container input[type="file"]:focus, .container input[type="email"]:focus, .container input[type="password"]:focus, .container input[type="name"]:focus, .login input[type="email"]:focus, .login input[type="password"]:focus, .login input[type="name"]:focus {
+    border-color: #888;
+  }
+  
+  .container input[type="submit"], .login input[type="submit"] {
+    margin-top: 30px;
+    background: #09bfa6;
+    border-color: transparent;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .container__text {
+    padding: 20px 0;
+  }
+  
+  .container input[type="submit"]:hover, .login input[type="submit"]:hover {
+    background-color: #099885;
+  }
+  
+  
+  /* Buttons' focus effect */
+  
+  .container input[type="submit"]:focus, .login input[type="submit"]:focus {
+    border-color: #058e7b;
+  }
+  
+  textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+    width: 800px;
+  }
+  
+  .login__text {
+    font-size: 15px;
+  }
+  
+  //posts
+  .posts-show, .posts__items {
+    display: flex;
+    position: relative;
+    background-color: #fff;
+    border-radius: 15px;
+    margin-top: 20px;
+    padding: 20px;
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+    -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+    -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+    -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+  }
+  
+  .posts {
+    &__padding {
+      padding-top: 10px;
+    }
+    &-show__text-bold {
+      font-weight: bold;
+    }
+    &-show__text {
+      padding: 20px 0 0 40px;
+      text-align: left;
+    }
+    &-show__favo {
+      background-color: #fff;
+      filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+      -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+      -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+      -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.1));
+      border-radius: 15px;
+      padding: 15px;
+      width: 100%;
+      max-width: 200px;
+      margin: 25px auto;
+    }
+    &__item {
+      text-align: left;
+      margin: 25px 20px;
+    }
+    &-show {
+      display: flex;
+      background-color: #fff;
+    }
+  }
+  
+  .post {
+    &__name {
+      font-weight: bold;
+      color: #2d3133;
+    }
+    &-time {
+      position: absolute;
+      bottom: 10px;
+      font-size: 12px;
+      color: rgb(114, 114, 114);
+      right: 20px;
+    }
+    &__img {
+      margin-top: 5px;
+      border-radius: 50%;
+      /* 角丸半径を50%にする(=円形にする) */
+      width: 90px;
+      /* ※縦横を同値に */
+      height: 90px;
+      /* ※縦横を同値に */
+    }
+    &__message a {
+      color: #686868;
+    }
+  }
+  
+  // group
+  .group {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    &__item {
+      background-color: #fff;
+      width: 100%;
+      max-width: 150px;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 10px;
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .post {
+      &__img {
+        width: 10vw;
+        /* ※縦横を同値に */
+        height: 10vw;
+        /* ※縦横を同値に */
+      }
+      &-time {
+        font-size: 0.5vw;
+      }
+    }
+    .login {
+      &__text {
+        font-size: 3vw;
+      }
+      &__title {
+        font-size: 3.2vw;
+        padding: 0 30px;
+      }
+    }
+  }

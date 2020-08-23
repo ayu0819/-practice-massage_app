@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Massage App</title>
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+      <%= stylesheet_link_tag 'anime', media: 'all', 'data-turbolinks-track': 'reload' %>
+          <%= stylesheet_link_tag 'scroll', media: 'all', 'data-turbolinks-track': 'reload' %>
+            <!-- FontAwesomeを読み込むlinkタグを追加してください -->
+            <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+            <link rel="stylesheet" type="text / css" href="http://yui.yahooapis.com/3.18.1/build/cssreset/cssreset-min.css">
+            <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.3.7/css/swiper.min.css">
+              <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"> </head>
+              <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <!-- header -->
+  <header id="header" class="header">
+    <div class="header__flex" id="js-global-nav">
+      <% if @current_user %>
+        <%# <%= link_to("Share your photos", "/posts/index") %>
+          <h1><a href="/"><img class="header__logo link" src="http://hudehisa.sakura.ne.jp/test_image/site-logo.png" alt=""></a></h1>
+          <% else %>
+            <h1><a href="/"><img class="header__logo link" src="http://hudehisa.sakura.ne.jp/test_image/site-logo.png" alt=""></a></h1>
+            <% end %>
+              <nav class="header__nav">
+                <ul class="header__nav__flex">
+                  <% if @current_user %>
+                    <li class="link">
+                      <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+                    </li>
+                    <li class="link">
+                      <%= link_to("投稿一覧", "/posts/index") %>
+                    </li>
+                    <li class="link">
+                      <%= link_to("新規投稿", "/posts/new") %>
+                    </li>
+                    <li class="link">
+                      <%= link_to("ユーザー一覧", "/users/index") %>
+                    </li>
+                    <li class="link">
+                      <%= link_to("ログアウト", "/logout", {method: :post}) %>
+                    </li>
+                    <% else %>
+                      <li class="link">
+                        <%= link_to("サービス", "/about") %>
+                      </li>
+                      <% end %>
+                </ul>
+              </nav>
+              <div class="buttons">
+                <div class="button link">
+                  <%= link_to("ログイン", "/login",{class: "link"}) %>
+                </div>
+                <div class="button link">
+                  <%= link_to("新規登録", "/signup",{class: "link"}) %>
+                </div>
+              </div>
+    </div>
+  </header>
+  <!-- /header -->
+  <!-- mb -->
+  <div class="ham" id="ham"> <span class="ham_line ham_line1"></span> <span class="ham_line ham_line2"></span> <span class="ham_line ham_line3"></span> </div>
+  <div class="menu_wrapper" id="menu_wrapper">
+    <div class="menu">
+      <ul>
+        <li class="link"><a href="#">サービス</a></li>
+        <li class="link"><a href="#">ログイン</a></li>
+        <li class="link"><a href="#">新規登録</a></li>
+      </ul>
+    </div>
+  </div>
+  <p></p>
+  <p></p>
+  <!-- /mb -->
+  <% if flash[:notice] %>
+    <div class="flash">
+      <%= flash[:notice] %>
+    </div>
+    <% end %>
+      <%= yield %>
+        <!-- footer -->
+        <footer class="content content__black">
+          <div class="footer content__size">
+            <div class="footer__items">
+              <ul>
+                <li><span class="footer__title">個人のお客様</span></li>
+                <li class="footer__padding"><a href="#" class="footer__text">使い方</a></li>
+                <li><a href="#" class="footer__text">お知らせ</a></li>
+                <li><a href="#" class="footer__text">ユーザー情報の取り扱い</a></li>
+                <li><a href="#" class="footer__text">サービス利用規約</a></li>
+                <li><a href="#" class="footer__text">ソーシャルメディア利用規約</a></li>
+              </ul>
+              <ul>
+                <li><span class="footer__title">ユーザー</span></li>
+                <li class="footer__padding"><a href="#" class="footer__text">TOP</a></li>
+                <li><a href="#" class="footer__text">アプリケーション取り扱い</a></li>
+                <li><a href="#" class="footer__text">お問い合わせ一覧</a></li>
+              </ul>
+              <ul>
+                <li><span class="footer__title">その他サービス</span></li>
+                <li class="footer__padding"><a href="#" class="footer__text">サービスについて</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer__copy">
+            <p class="footer__copy-text"><small>Copyright (C) 2020 Message App, Ltd.</small></p>
+          </div>
+        </footer>
+        <!-- /footer -->
+</body>
+</html>

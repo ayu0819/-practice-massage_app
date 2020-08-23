@@ -1,0 +1,1060 @@
+/* reset ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'M PLUS 1p', sans-serif;
+  font-family: 'Titillium Web', sans-serif;
+  line-height: 1.7;
+  letter-spacing: 1px;
+}
+
+ul, li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #2d3133;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+dl {
+  list-style: none;
+  margin-bottom: 16px;
+}
+
+dt {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+}
+
+dd {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 28px;
+  border-bottom: dotted 1px #ccc;
+}
+
+th {
+  padding: .60rem;
+  vertical-align: top;
+} //input 
+input {
+  background-color: transparent;
+  outline-width: 0;
+}
+
+form input[type="submit"] {
+  border: none;
+  cursor: pointer;
+}
+
+
+/* 共通レイアウト ================================ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #2d3133;
+  background-color: #fff;
+  margin: 0;
+}
+
+.flash {
+  padding: 10px 0;
+  color: white;
+  background: rgb(104, 191, 49);
+  text-align: center;
+  position: absolute;
+  top: 64px;
+  z-index: 10;
+  width: 100%;
+  border-radius: 0 0 2px 2px;
+  font-size: 14px;
+}
+
+.link a {
+  color: #00d1b2;
+  font-size: 1vw;
+} // icon
+.material-icons.md-18 {
+  font-size: 18px;
+}
+
+.material-icons.md-24 {
+  font-size: 24px;
+}
+
+.material-icons.md-36 {
+  font-size: 36px;
+}
+
+.material-icons.md-48 {
+  font-size: 48px;
+}
+
+
+/* 背景が明るいとき用のアイコン色 */
+
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+}
+
+.material-icons.md-dark.md-inactive {
+  color: rgba(0, 0, 0, 0.26);
+}
+
+
+/* 背景が暗いとき用のアイコン色 */
+
+.material-icons.md-light {
+  color: rgba(255, 255, 255, 1);
+}
+
+.material-icons.md-light.md-inactive {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.icon {
+  &__app {
+    vertical-align: text-top;
+    display: inline-block;
+    padding-right: 10px;
+  }
+  &__bottom {
+    display: inline-block;
+    vertical-align: bottom;
+  }
+  &__next {
+    vertical-align: text-top;
+    display: inline-block;
+  }
+}
+
+//content
+.content {
+  padding-top: 70px;
+  text-align: center;
+  width: 100%;
+  &__form {
+    padding: 100px 0 100px 0;
+    text-align: center;
+    width: 100%;
+  }
+  &__padding {
+    padding-top: 50px;
+  }
+  &__sub-title {
+    padding: 50px 0 20px 0;
+    font-size: 22px;
+  }
+  &__text {
+    margin: 0 auto;
+    font-size: 17px;
+  }
+  &__gray {
+    background-color: rgb(242, 242, 242);
+  }
+  &__size {
+    max-width: 75vw;
+    width: 1220px;
+    padding-bottom: 70px;
+  }
+  &__green {
+    background-color: rgb(199, 233, 230);
+  }
+  &__black {
+    background-color: rgb(65, 65, 65);
+  }
+  &__color {
+    color: rgb(54, 179, 160);
+  }
+  &__blue {
+    background-color: rgb(27, 211, 208);
+    background-position: center center;
+    background-image: url(http://hudehisa.sakura.ne.jp/test_image/back-pattern.png);
+  }
+  &__items {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  &__item {
+    margin: 20px 10px;
+    background-color: #00d1b2;
+    color: #fff !important;
+    width: 400px;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+  }
+  &__item a {
+    color: #fff !important;
+  }
+}
+
+.content__title, .login__title {
+  font-size: 30px;
+  font-weight: bold;
+  padding-bottom: 10px;
+  color: #686868;
+}
+
+
+/* button */
+
+.button {
+  border: solid 1px #09bfa6;
+  border-radius: 10px;
+  margin-left: 7px;
+  padding: 10px;
+  font-size: 12px;
+  & p {
+    padding: 7px 12px;
+    font-weight: bold;
+    color: #09bfa6 !important;
+  }
+}
+
+.buttons {
+  display: flex;
+}
+
+.btns {
+  transition: 0.3s;
+  background-color: rgb(54, 179, 160);
+  width: 100%;
+  cursor: pointer;
+  max-width: 300px;
+  color: #fff;
+  font-size: 15px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  border-radius: 15px;
+  z-index: 99;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  &__text {
+    position: relative;
+    top: 10px;
+    margin-right: 5px;
+    font-weight: bold;
+  }
+}
+
+.btn__text {
+  vertical-align: middle;
+}
+
+
+/* mb_menu */
+
+.ham {
+  top: 10px;
+  left: 10px;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 9999;
+  display: none;
+  position: fixed;
+  &_line {
+    position: absolute;
+    left: 10px;
+    width: 40px;
+    height: 3px;
+    background-color: #686868;
+    transition: all 0.3s;
+    border-radius: 15px;
+  }
+  &_line1 {
+    top: 10px;
+  }
+  &_line2 {
+    top: 21px;
+  }
+  &_line3 {
+    top: 32px;
+  }
+}
+
+.clicked .ham_line1 {
+  transform: rotate(45deg);
+  top: 20px;
+}
+
+.clicked .ham_line2 {
+  width: 0px;
+}
+
+.clicked .ham_line3 {
+  transform: rotate(-45deg);
+  top: 20px;
+}
+
+.clicked .menu {
+  left: 0px;
+  text-align: center;
+}
+
+// nav
+nav {
+  margin-left: auto;
+}
+
+//header
+.header {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  &__flex {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    /* padding: 0 8rem; */
+    /* width: 1220px; */
+    max-width: 1220px;
+    margin: 0 auto;
+  }
+  &__nav__flex {
+    list-style: none;
+    display: flex;
+  }
+  &__nav__flex li {
+    margin: 0 15px;
+  }
+  &__logo {
+    padding-top: 15px;
+    display: inline-block;
+    width: 14vw;
+    min-width: 100px;
+  }
+}
+
+.global-nav {
+  /* width: 100%; */
+  z-index: 10;
+  padding: 0 8rem;
+  margin: 0 auto;
+  height: auto;
+}
+
+// menu
+.menu {
+  display: none;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: -800px;
+  background-color: rgba(78, 215, 190, 0.879);
+  transition: all 0.3s;
+  z-index: 99;
+  & li {
+    padding: 10px;
+  }
+  & ul {
+    margin-top: 50px;
+  }
+  & a {
+    color: #fff;
+    font-weight: bold;
+  }
+}
+
+.jumbotron {
+  position: relative;
+  width: 100%;
+  height: 0;
+  /* (画像の高さ / 画像の横幅) × 100 */
+  background: url(http://hudehisa.sakura.ne.jp/test_image/top-image.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  padding-top: 45%;
+  background-position: center center;
+  &__banners {
+    display: flex;
+    justify-content: center;
+  }
+  &__banner {
+    width: 100%;
+    max-width: 17vw;
+    padding: 20px 10px 0 0;
+  }
+  &__title {
+    color: #09bfa6;
+    font-size: 3.3vw;
+    /* -webkit-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
+    -moz-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
+    -ms-filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7));
+    filter:drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.7)); */
+  }
+  &__title-mb {
+    color: #fff;
+    font-size: 5.5vw;
+  }
+  &__items {
+    position: absolute;
+    top: 30%;
+    left: 160px;
+  }
+  &__items-mb {
+    display: none;
+  }
+}
+
+
+/* promotion */
+
+.promotion {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  &__img {
+    margin: 10px;
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+.about {
+  margin: 0 auto;
+  &__title {
+    font-size: 35px;
+    padding-bottom: 30px;
+    color: #686868;
+  }
+  &__text {
+    margin: 0 auto;
+  }
+  &__cards {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  &__card {
+    margin: 15px;
+    /* width: 100%; */
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  &__card-img-3 {
+    width: 100%;
+    height: 0;
+    /* (画像の高さ / 画像の横幅) × 100 */
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-11.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__card-img-2 {
+    width: 100%;
+    height: 0;
+    /* (画像の高さ / 画像の横幅) × 100 */
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-6.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__card-img-1 {
+    width: 100%;
+    height: 0;
+    /* (画像の高さ / 画像の横幅) × 100 */
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-10.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+  }
+  &__card-title {
+    padding-top: 20px;
+  }
+  &__card-text {
+    text-align: left;
+    padding-top: 10px;
+    margin: 0 auto;
+  }
+}
+
+// seen
+.seen {
+  margin: 15px 15px 35px 15px;
+  &__button-text {
+    position: relative;
+    top: 8px;
+  }
+  &__title {
+    display: none;
+    padding-bottom: 10px;
+    color: rgb(54, 179, 160);
+    font-weight: bold;
+    font-size: 20px;
+  }
+  &__center {
+    margin: 0 auto;
+  }
+  &__cards {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+  &__card-title {
+    position: absolute;
+    font-weight: bold;
+    font-size: 13px;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.728);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+  }
+  &__card {
+    position: relative;
+  }
+  &__card-back {
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 17px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  &__card-text {
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.728);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    font-size: 13px;
+    cursor: pointer;
+  }
+  &__button {
+    border: solid 2px #00d1b2;
+    border-radius: 40px;
+    padding: 20px 0 20px 0;
+    background-color: #fff;
+    font-weight: bold;
+    color: #00d1b2;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 18px;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  &__card-img-1 {
+    width: 100%;
+    height: 0;
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-5.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  &__card-img-2 {
+    width: 100%;
+    height: 0;
+    /* (画像の高さ / 画像の横幅) × 100 */
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-4.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  &__card-img-3 {
+    width: 100%;
+    height: 0;
+    /* (画像の高さ / 画像の横幅) × 100 */
+    padding-top: 66.6666666667%;
+    background: url(http://hudehisa.sakura.ne.jp/test_image/photo_img-2.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 10px;
+  }
+  &__section {
+    margin: 0 auto;
+  }
+}
+
+.application {
+  &__cards {
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+  &__card-img {
+    width: 100%;
+    max-width: 200px;
+  }
+  &__card-banner {
+    max-width: 150px;
+  }
+  &__title {
+    color: #fff;
+  }
+  &__banners {
+    padding-top: 20px;
+  }
+  &__card {
+    margin: 15px;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  }
+  &__card-text {
+    padding-top: 20px;
+    text-align: left;
+  }
+  &__banner {
+    width: 100%;
+    max-width: 250px;
+    padding-top: 10px;
+  }
+  &__card-number {
+    font-size: 20px;
+  }
+  &__card-title {
+    padding: 15px 0 15px 0;
+    font-size: 25px;
+  }
+}
+
+// content
+.content {
+  &__shape {
+    border-width: 5px 0px 0px 0px;
+    /* 太さ */
+    border-style: solid;
+    /* 線種 */
+    border-color: rgb(54, 179, 160);
+    /* 線色 */
+    width: 60px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+  &__shape-contact {
+    margin-bottom: 15px;
+    width: 5px;
+    background-color: rgb(54, 179, 160);
+    height: 30px;
+    margin: 10px 0 20px 20px;
+  }
+  &__shape-white {
+    border-width: 5px 0px 0px 0px;
+    /* 太さ */
+    border-style: solid;
+    /* 線種 */
+    border-color: rgb(255, 255, 255);
+    /* 線色 */
+    width: 60px;
+    margin: 0 auto;
+    padding-bottom: 30px;
+  }
+}
+
+// information
+.information {
+  margin: 0 auto;
+  &__border {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    border-top: 1px solid #00d1b2;
+    padding: 20px 0;
+    text-align: left;
+  }
+  &__un-border {
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    padding: 20px 0;
+    text-align: left;
+  }
+  &__day {
+    color: #00d1b2;
+  }
+}
+
+// cv
+.cv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  flex-direction: row;
+  max-width: 800px !important;
+  -webkit-flex-wrap: wrap;
+  /* Safari etc. */
+  -ms-flex-wrap: wrap;
+  /* IE10        */
+  &__content {
+    text-align: center;
+    width: 100%;
+    padding: 50px 0 50px 0;
+    background-color: rgb(27, 211, 208);
+    background-position: center center;
+    background-image: url(http://hudehisa.sakura.ne.jp/test_image/back-pattern.png);
+  }
+  &__items {
+    padding-top: 130px;
+  }
+  &__banner {
+    width: 100%;
+    max-width: 200px;
+  }
+  &__banners {
+    padding-top: 20px;
+  }
+  &__img {
+    -webkit-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    -moz-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    -ms-filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    filter: drop-shadow(1px 3px 5px rgba(0, 0, 0, 0.5));
+    width: 100%;
+    max-width: 350px;
+  }
+  &__logo {
+    max-width: 230px;
+    padding: 15px 0 15px 0;
+  }
+  &__text {
+    font-weight: bold;
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+
+/* contact */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  &__text {
+    font-size: 30px;
+    border-color: #00d1b2;
+    font-weight: bold;
+  }
+  &__number {
+    font-size: 30px;
+    border-color: #00d1b2;
+    font-weight: bold;
+  }
+  &__colour {
+    color: rgb(106, 106, 106);
+    font-size: 15px;
+  }
+}
+
+
+/* footer */
+
+.footer {
+  margin: 0 auto;
+  &__items {
+    margin: 0 auto;
+    padding: 60px 10px 50px;
+    width: 100%;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: start;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+  &__link {
+    max-width: 360px;
+    display: inline-block;
+    padding: 0 10px;
+  }
+  &__title {
+    font-weight: bold;
+    font-size: 21px;
+  }
+  &__text {
+    font-size: 14px !important;
+    color: #fff !important;
+  }
+  &__items ul li {
+    text-align: left;
+  }
+  &__padding {
+    padding-top: 15px;
+  }
+  &__items li {
+    color: #fff !important;
+  }
+  &__copy {
+    background-color: rgb(26, 26, 26);
+    width: 100%;
+    padding: 10px;
+  }
+  &__copy-text {
+    color: #fff;
+    margin: 0 auto;
+  }
+} // swiper
+.swiper {
+  &__img {
+    width: 200px;
+    border-radius: 15px;
+  }
+  &-pagination {
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    position: relative !important;
+  }
+  &-container {
+    width: 100%;
+    max-width: 750px;
+    height: 100%;
+  }
+  &-slide {
+    text-align: center;
+    font-size: 18px;
+    background-color: rgb(242, 242, 242);
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+  cursor: pointer;
+  margin: 0 5px 0 5px;
+}
+
+// js css
+.btns {
+  &__js {
+    background-color: #fff;
+    border: solid 2px #00d1b2;
+    color: rgb(27, 211, 208);
+    transition: 0.3s;
+  }
+}
+
+.overBtn {
+  background-color: rgb(54, 179, 160);
+  color: #fff;
+  transition: 0.3s;
+}
+
+.hover {
+  transition: 0.3s;
+  transform: scale(1.05);
+}
+
+
+/* smartphone ================================ */
+
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+    &__nav__flex {
+      display: none;
+    }
+  }
+  .ham {
+    display: block;
+  }
+  .menu {
+    display: block;
+    &_wrapper {
+      display: block;
+    }
+  }
+  .buttons {
+    display: none;
+  }
+  .seen {
+    &__button {
+      width: 80%;
+    }
+    &__cards {
+      margin: 10px;
+    }
+    &__title {
+      display: block;
+    }
+    &__card-title {
+      font-size: 10px !important;
+      display: none;
+    }
+    &__card-text {
+      font-size: 10px !important;
+    }
+    &__card-back {
+      margin: 10px;
+    }
+  }
+  .cv {
+    justify-content: center;
+    flex-direction: column-reverse;
+    &__img {
+      padding-top: 60px;
+    }
+  }
+  .information {
+    // padding: 0 20px 0 20px;
+    padding: 0 30px;
+  }
+  .contact {
+    display: block;
+  }
+  .about {
+    &__card {
+      margin: 30px;
+    }
+    &__title {
+      font-size: 7vw;
+    }
+  }
+  .application {
+    &__card {
+      margin: 30px;
+    }
+    .swiper {
+      &-slide {
+        width: 50% !important;
+      }
+    }
+    .content {
+      &__shape-contact {
+        border-color: rgb(54, 179, 160);
+        /* 線色 */
+        width: 60px;
+        margin: 0 auto;
+        height: 5px !important;
+      }
+      &__title {
+        font-size: 7vw;
+        padding: 0 30px;
+      }
+      &__text {
+        font-size: 4vw;
+        padding: 0 30px;
+      }
+      &__text {
+        font-size: 2.8vw;
+      }
+      &__sub-title {
+        font-size: 3.5vw;
+      }
+      &__item {
+        width: 32vw;
+      }
+    }
+  }
+  .footer {
+    &__items {
+      display: block;
+      margin: 10px auto;
+      width: 90vw;
+    }
+    &__items ul {
+      padding-top: 30px;
+    }
+    &__title {
+      border-bottom: solid #fff 2px;
+      padding-bottom: 10px;
+      font-size: 4vw;
+    }
+    &__text {
+      font-size: 20px !important;
+    }
+  }
+  .cv {
+    &__items {
+      padding-top: 20px;
+    }
+  }
+  .btns {
+    display: none;
+  }
+  .jumbotron {
+    position: relative;
+    width: 100%;
+    height: 120vw;
+    background-image: url(http://hudehisa.sakura.ne.jp/test_image/top-image-mb.png);
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: cover;
+    &__items {
+      display: none;
+    }
+    &__items-mb {
+      display: block;
+    }
+    &__title-mb {
+      display: block;
+      position: absolute;
+      top: 90px;
+      line-height: 1.5;
+      left: 10%;
+      text-align: center;
+      font-size: 8.1vw;
+      filter: drop-shadow(0 0 6px rgba(12, 28, 32, 0.7));
+    }
+  }
+} 

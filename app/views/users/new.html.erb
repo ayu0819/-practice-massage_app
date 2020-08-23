@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="content__gray content__form">
+    <div class="login">
+      <h1 class="login__title">Massage App に新規登録する</h1>
+      <div class="content__padding">
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+          <% end %>
+            <%= form_tag("/users/create") do %>
+              <div>
+                <p>ユーザー名</p> <input type="name" name="name" value="<%= @user.name %>">
+                <p>メールアドレス</p> <input type="email" name="email" value="<%= @user.email %>">
+                <p>パスワード</p> <input type="password" name="password" value="<%= @user.password %>"> </div>
+              <div> <input type="submit" value="新規登録"> </div>
+              <% end %>
+      </div>
+    </div>
+  </div>
+  </div>
+</body>
+</html>

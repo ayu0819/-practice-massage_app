@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="content__gray content__form">
+    <div class="container">
+      <div class="posts-show"> <img class="post__img" src="<%= " /user_images/#{@user.image_name} " %>">
+        <p class="posts-show__text">
+          <%= link_to(@user.name, "/users/#{@user.id}",{class: "posts-show__text-bold"}) %><br>
+            <%= @post.content %>
+        </p>
+          <div class="post-time">
+          <%= @post.created_at %>
+           </div>
+        </div>
+         
+   <div class="posts-show__favo">
+        <% if Like.find_by(user_id: @current_user.id, post_id: @post.id) %>
+          <%= link_to("/likes/#{@post.id}/destroy", {method: "post"}) do %> <span class="fa fa-star like-btn-unlike"></span>
+            <% end %>
+              <% else %>
+                <%= link_to("/likes/#{@post.id}/create", {method: "post"}) do %> <span class="fa fa-star like-btn"></span>
+                  <% end %>
+                    <% end %>
+                   
+ 
+                      <!-- 変数@likes_countを表示してください -->
+                      <%= @likes_count %>
+                        <% if @post.user_id == @current_user.id %>
+</div>
+
+                          <div class="post-menus">
+                          
+                            <%= link_to("編集", "/posts/#{@post.id}/edit") %>
+                              <%= link_to("削除", "/posts/#{@post.id}/destroy", {method: "post"}) %>
+                          
+                          <% end %>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

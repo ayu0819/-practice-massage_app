@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<div class="content__gray content__form">
+  <div class="container">
+    <h1 class="login__title">アカウント編集</h1>
+    <div class="content__padding">
+    
+        <% @user.errors.full_messages.each do |message| %>
+          <div class="form-error">
+            <%= message %>
+          </div>
+        <% end %>
+        <%= form_tag("/users/#{@user.id}/update", {multipart: true}) do %>
+          <p class="container__text">ユーザー名</p>
+          <input type="name" name="name" value="<%= @user.name %>">
+          <p class="container__text">画像</p>
+          <input name="image" type="file">
+          <p class="container__text">メールアドレス</p>
+          <input type="email" name="email" value="<%= @user.email %>">
+          <input type="submit" value="保存">
+        <% end %>
+    </div>
+  </div>
+</div>
+</body>
+</html>

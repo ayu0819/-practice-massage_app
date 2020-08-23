@@ -1,0 +1,597 @@
+.columns_2 {
+    margin-left: -0.75rem;
+    margin-right: -0.75rem;
+    margin-top: -0.75rem;
+    padding: 1.5rem 8rem;
+    max-width:1400px;
+    margin:0 auto;
+  }
+  
+  .columns_2:last-child {
+    margin-bottom: -0.75rem;
+    padding: 1.5rem 2rem;
+  }
+  
+  .columns_2:not(:last-child) {
+    margin-bottom: calc(1.5rem - 0.75rem);
+  }
+  
+  .columns_2.is-centered {
+    justify-content: center;
+  }
+  
+  .columns_2.is-gapless {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+  }
+  
+  .columns_2.is-gapless > .column {
+    margin: 0;
+    padding: 0 !important;
+  }
+  
+  .columns_2.is-gapless:not(:last-child) {
+    margin-bottom: 1.5rem;
+  }
+  
+  .columns_2.is-gapless:last-child {
+    margin-bottom: 0;
+  }
+  
+  .columns_2.is-mobile {
+    display: flex;
+  }
+  
+  .columns_2.is-multiline {
+    flex-wrap: wrap;
+  }
+  
+  .columns_2.is-vcentered {
+    align-items: center;
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2:not(.is-desktop) {
+      display: flex;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-desktop {
+      display: flex;
+    }
+  }
+  
+  .columns_2.is-variable {
+    --columnGap: 0.75rem;
+    margin-left: calc(-1 * var(--columnGap));
+    margin-right: calc(-1 * var(--columnGap));
+  }
+  
+  .columns_2.is-variable .column {
+    padding-left: var(--columnGap);
+    padding-right: var(--columnGap);
+  }
+  
+  .columns_2.is-variable.is-0 {
+    --columnGap: 0rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-0-mobile {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-0-tablet {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-0-tablet-only {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-0-touch {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-0-desktop {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-0-desktop-only {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-0-widescreen {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-0-widescreen-only {
+      --columnGap: 0rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-0-fullhd {
+      --columnGap: 0rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-1 {
+    --columnGap: 0.25rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-1-mobile {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-1-tablet {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-1-tablet-only {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-1-touch {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-1-desktop {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-1-desktop-only {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-1-widescreen {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-1-widescreen-only {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-1-fullhd {
+      --columnGap: 0.25rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-2 {
+    --columnGap: 0.5rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-2-mobile {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-2-tablet {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-2-tablet-only {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-2-touch {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-2-desktop {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-2-desktop-only {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-2-widescreen {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-2-widescreen-only {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-2-fullhd {
+      --columnGap: 0.5rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-3 {
+    --columnGap: 0.75rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-3-mobile {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-3-tablet {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-3-tablet-only {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-3-touch {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-3-desktop {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-3-desktop-only {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-3-widescreen {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-3-widescreen-only {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-3-fullhd {
+      --columnGap: 0.75rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-4 {
+    --columnGap: 1rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-4-mobile {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-4-tablet {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-4-tablet-only {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-4-touch {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-4-desktop {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-4-desktop-only {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-4-widescreen {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-4-widescreen-only {
+      --columnGap: 1rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-4-fullhd {
+      --columnGap: 1rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-5 {
+    --columnGap: 1.25rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-5-mobile {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-5-tablet {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-5-tablet-only {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-5-touch {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-5-desktop {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-5-desktop-only {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-5-widescreen {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-5-widescreen-only {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-5-fullhd {
+      --columnGap: 1.25rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-6 {
+    --columnGap: 1.5rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-6-mobile {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-6-tablet {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-6-tablet-only {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-6-touch {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-6-desktop {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-6-desktop-only {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-6-widescreen {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-6-widescreen-only {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-6-fullhd {
+      --columnGap: 1.5rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-7 {
+    --columnGap: 1.75rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-7-mobile {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-7-tablet {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-7-tablet-only {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-7-touch {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-7-desktop {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-7-desktop-only {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-7-widescreen {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-7-widescreen-only {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-7-fullhd {
+      --columnGap: 1.75rem;
+    }
+  }
+  
+  .columns_2.is-variable.is-8 {
+    --columnGap: 2rem;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .columns_2.is-variable.is-8-mobile {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px), print {
+    .columns_2.is-variable.is-8-tablet {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .columns_2.is-variable.is-8-tablet-only {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 1023px) {
+    .columns_2.is-variable.is-8-touch {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) {
+    .columns_2.is-variable.is-8-desktop {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 1024px) and (max-width: 1215px) {
+    .columns_2.is-variable.is-8-desktop-only {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) {
+    .columns_2.is-variable.is-8-widescreen {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 1216px) and (max-width: 1407px) {
+    .columns_2.is-variable.is-8-widescreen-only {
+      --columnGap: 2rem;
+    }
+  }
+  
+  @media screen and (min-width: 1408px) {
+    .columns_2.is-variable.is-8-fullhd {
+      --columnGap: 2rem;
+    }
+  }

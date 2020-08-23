@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+<div class="content__gray content__form">
+  <div class="container">
+    <h1 class="login__title">List of users</h1>
+    <div class="group">
+    <% @users.each do |user| %>
+      <div class="group__item">
+        <!-- 指定されたHTMLを貼り付けてください -->
+        <div class="user-left">
+          <!-- <img>タグを用いて、プロフィール画像を表示してください -->
+          <img class="post__img" src="<%= "/user_images/#{user.image_name}" %>">
+        </div>
+        <div class="user-right">
+          <%= link_to(user.name, "/users/#{user.id}") %>
+        </div>
+   </div>
+    <% end %>
+    </div>
+  </div>
+</div>
+</head>
+</html>

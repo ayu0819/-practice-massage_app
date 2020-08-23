@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+        <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+  <div class="content__gray content__form">
+    <div class="content__size seen__center">
+      <div class="about-main">
+        <h2 class="about__title"><span class="content__color">ようこそ</span> Share your photos へ</h2>
+        <h3 class="about__text"> あなたの写真を投稿することができます。 他のユーザーと楽しくコミュニケーションできます。 </strong>
+        </h3>
+        <div class="about__texts">
+          <h3 class="content__sub-title">Share your photos とは</h3>
+          <p class="about__text">Share your photos とはは、ユーザーが作品(写真・デザイン)を投稿し、たくさんの暖かい声援をもらうことができるSNSです。<br> クリエイターの作品投稿・ファンのフィードバックという循環を磨いていくことで、創作活動にまつわる人すべてが創作活動をより楽しむことができます。</p>
+          <h3 class="content__sub-title">写真を投稿しよう</h3>
+          <p class="about__text"> 作品を投稿するサービスは多くありますが、Share your photosは特に「創作活動がもっと楽しくなること」「自分の好きなものが見つかること」を重要視しています。 </p>
+          <h3 class="content__sub-title">投稿しよう!</h3>
+          <div class="content__items">
+            <a class="link" href="/login">
+              <div class="content__item"> ログイン </div>
+            </a>
+            <a class="link" href="/signup">
+              <div class="content__item"> 新規登録 </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
